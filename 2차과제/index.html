@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>내 프로필 | 과제</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header class="page-title" aria-label="페이지 제목">
+        <span class="dot" aria-hidden="true"></span>
+        <div class="title-text">
+          <p>2차 과제 프로필 페이지 제작</p>
+        </div>
+      </header>
+
+      <div class="grid">
+        <div class="section" id="profile-section">
+          <h2>안녕하세요</h2>
+          <div class="profile">
+            <div class="avatar-wrap">
+              <img class="avatar" src="img/profile.jpeg" />
+            </div>
+            <div class="intro">
+              <p><strong>오정빈</strong>웹 백엔드 개발 공부중입니다.</p>
+              <div class="chips" aria-label="키워드">
+                <span class="chip">#Node.js</span>
+                <span class="chip">#Spring</span>
+                <span class="chip">#Docker</span>
+                <span class="chip">#MariaDB</span>
+                <span class="chip">#phpMyadmin</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="section" id="stack-section">
+          <h2>기술 스택</h2>
+          <ul class="stack" id="stack-list" aria-live="polite">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>NodeJS</li>
+          </ul>
+
+          <div class="controls">
+            <input
+              type="text"
+              id="stack-input"
+              placeholder="예: React"
+              aria-label="스택 추가 입력"
+            />
+            <button class="btn" id="add-stack-btn" type="button">
+              + 스택 추가
+            </button>
+          </div>
+        </div>
+
+        <div class="section" id="interests-section">
+          <h2>관심 분야</h2>
+          <p class="sub">사진처럼 2열 배치 + 마지막 항목 가로 전체</p>
+
+          <ul class="interests-grid" id="interests">
+            <li class="interest-pill">AI 사용방법</li>
+            <li class="interest-pill">MSA 설계</li>
+            <li class="interest-pill">대용량 트래픽 처리</li>
+            <li class="interest-pill">RAG</li>
+          </ul>
+        </div>
+
+        <div class="section" id="contact-section">
+          <h2>소통 채널</h2>
+          <div class="links">
+            <div class="link-card">
+              <strong>Email</strong>
+              <small
+                ><a href="mailto:dhwjdqls0409@gmail.com">바로가기</a></small
+              >
+            </div>
+            <div class="link-card">
+              <strong>GitHub</strong>
+              <small
+                ><a
+                  href="https://github.com/LeoOH5"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >바로가기</a
+                ></small
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div  class="section" style="margin-top:16px">
+        <h2>관련 영상</h2>
+        <div class="video-wrap">
+          <iframe
+            src="https://www.youtube.com/embed/tuH1ZTl9s9Q"
+            title="HTML & CSS Full Course"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div>
+    </div>
+
+      <footer></footer>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

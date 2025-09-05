@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>메뉴 등록 - 점심 메뉴 관리 시스템</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <h1>메뉴 등록</h1>
+        <p>새로운 점심 메뉴를 등록해보세요</p>
+      </header>
+
+      <main class="main">
+        <form id="menuForm" class="form">
+          <div class="form-group">
+            <label for="name">메뉴 이름 *</label>
+            <input type="text" id="name" name="name" required />
+            <div class="error" id="nameError" style="display: none">
+              메뉴 이름을 입력해주세요.
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="spicy">맵기 정도 *</label>
+            <select id="spicy" name="spicy" required>
+              <option value="">선택하세요</option>
+              <option value="mild">순한맛</option>
+              <option value="medium">중간</option>
+              <option value="hot">매움</option>
+              <option value="fire">불맛🔥</option>
+            </select>
+            <div class="error" id="spicyError" style="display: none">
+              맵기 정도를 선택해주세요.
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="price">가격 (원) *</label>
+            <input type="number" id="price" name="price" min="0" required />
+            <div class="error" id="priceError" style="display: none">
+              가격을 입력해주세요.
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="type">음식 종류 *</label>
+            <select id="type" name="type" required>
+              <option value="">선택하세요</option>
+              <option value="korean">한식</option>
+              <option value="chinese">중식</option>
+              <option value="japanese">일식</option>
+              <option value="western">양식</option>
+              <option value="street">분식</option>
+            </select>
+            <div class="error" id="typeError" style="display: none">
+              음식 종류를 선택해주세요.
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="mood">오늘의 기분</label>
+            <input
+              type="text"
+              id="mood"
+              name="mood"
+              placeholder="예) 든든하게, 가볍게, 얼큰하게..."
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="description">메뉴 설명</label>
+            <textarea
+              id="description"
+              name="description"
+              rows="3"
+              placeholder="예) 돼지고기와 김치가 들어간 얼큰한 찌개"
+            ></textarea>
+          </div>
+
+          <div class="form-actions">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              onclick="goToMain()"
+            >
+              취소
+            </button>
+            <button type="submit" class="btn btn-primary">등록하기</button>
+          </div>
+        </form>
+
+        <div id="result" class="result" style="display: none"></div>
+      </main>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

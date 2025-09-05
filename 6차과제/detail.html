@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>메뉴 상세 - 점심 메뉴 관리 시스템</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <h1>메뉴 상세</h1>
+        <p>메뉴의 자세한 정보를 확인해보세요</p>
+      </header>
+
+      <main class="main">
+        <div id="loading" class="loading">메뉴 정보를 불러오는 중...</div>
+
+        <div id="menuDetail" class="menu-detail" style="display: none">
+          <div class="menu-header">
+            <h2 id="menuName" class="menu-name"></h2>
+            <div id="menuMood" class="menu-mood"></div>
+          </div>
+
+          <div class="menu-info">
+            <div class="info-item">
+              <label>맵기 정도</label>
+              <div id="menuSpicy" class="spicy-level"></div>
+            </div>
+
+            <div class="info-item">
+              <label>가격</label>
+              <div id="menuPrice" class="menu-price"></div>
+            </div>
+
+            <div class="info-item">
+              <label>음식 종류</label>
+              <div id="menuType" class="menu-type"></div>
+            </div>
+
+            <div class="info-item">
+              <label>등록일</label>
+              <div id="menuCreatedAt" class="menu-date"></div>
+            </div>
+          </div>
+
+          <div class="menu-description">
+            <label>메뉴 설명</label>
+            <div id="menuDescription" class="description-text"></div>
+          </div>
+        </div>
+
+        <div id="notFound" class="not-found" style="display: none">
+          <div class="not-found-icon">🔍</div>
+          <h3>메뉴를 찾을 수 없습니다</h3>
+          <p>요청하신 메뉴가 존재하지 않거나 삭제되었습니다.</p>
+          <button class="btn btn-primary" onclick="goToList()">
+            목록으로 돌아가기
+          </button>
+        </div>
+
+        <div id="error" class="error-message" style="display: none">
+          <div class="error-icon">❌</div>
+          <h3>메뉴 정보를 불러올 수 없습니다</h3>
+          <p>잠시 후 다시 시도해주세요.</p>
+          <button class="btn btn-primary" onclick="loadMenuDetail()">
+            다시 시도
+          </button>
+        </div>
+      </main>
+
+      <div class="back-button">
+        <button class="btn btn-secondary" onclick="goToList()">
+          ← 목록으로 돌아가기
+        </button>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

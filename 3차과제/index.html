@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To Do List</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <span class="dot" aria-hidden="true"></span>
+        <h1>To Do List</h1>
+      </header>
+
+      <section class="panel" aria-labelledby="input-title">
+        <h2 id="input-title" style="margin: 0 0 10px; font-size: 16px">
+          할 일 입력
+        </h2>
+        <div class="input-row">
+          <textarea
+            id="todo-input"
+            placeholder="할 일을 입력하세요 (Shift+Enter: 줄바꿈, Enter: 추가)"
+            aria-label="할 일 입력"
+          ></textarea>
+          <button class="btn primary" id="add-btn" type="button">+ 추가</button>
+        </div>
+      </section>
+
+      <section class="panel" aria-labelledby="list-title">
+        <div class="toolbar">
+          <h2 id="list-title" style="margin: 0; font-size: 16px">내 할 일</h2>
+          <div class="counter" id="counter">0개</div>
+        </div>
+        <ul id="todo-list" aria-live="polite"></ul>
+      </section>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
